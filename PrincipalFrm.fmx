@@ -1,0 +1,109 @@
+﻿object frmPrincipal: TfrmPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'Ordem de servi'#231'o'
+  ClientHeight = 480
+  ClientWidth = 640
+  WindowState = wsMaximized
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object tlbBarraFerramentas: TToolBar
+    Size.Width = 640.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Button1: TButton
+      Align = Left
+      Size.Width = 80.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Clientes'
+    end
+    object btnOrdemServico: TButton
+      Align = Left
+      Position.X = 80.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Ordens'
+    end
+  end
+  object lytPrincipal: TLayout
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 440.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+  end
+  object menu: TMainMenu
+    Left = 536
+    Top = 112
+    object Cadastros: TMenuItem
+      Text = 'Cadastros'
+      object Clientes: TMenuItem
+        Action = actClients
+        Enabled = True
+        Locked = True
+        ImageIndex = -1
+      end
+      object Veículos: TMenuItem
+        Action = actVeiculos
+        Enabled = True
+        Locked = True
+        ImageIndex = -1
+      end
+      object FormasDePagamento: TMenuItem
+        Action = actFormasPagamento
+        Enabled = True
+        Locked = True
+        ImageIndex = -1
+      end
+      object Serviços: TMenuItem
+        Action = actServicos
+        Enabled = True
+        Locked = True
+        ImageIndex = -1
+      end
+    end
+    object Movimentações: TMenuItem
+      Text = 'Movimenta'#231#245'es'
+      object OrdemDeServiço: TMenuItem
+        Locked = True
+        Text = 'Ordem de servi'#231'o'
+      end
+    end
+  end
+  object actAcoes: TActionList
+    Left = 528
+    Top = 264
+    object actClients: TAction
+      Category = 'Cadastros'
+      Text = 'Clientes'
+      OnExecute = actClientsExecute
+    end
+    object actFormasPagamento: TAction
+      Category = 'Cadastros'
+      Text = 'Formas de Pagamento'
+      OnExecute = actFormasPagamentoExecute
+    end
+    object actServicos: TAction
+      Category = 'Cadastros'
+      Text = 'Servi'#231'os'
+      OnExecute = actServicosExecute
+    end
+    object actVeiculos: TAction
+      Category = 'Cadastros'
+      Text = 'Veiculos'
+      OnExecute = actVeiculosExecute
+    end
+    object actOrdensServicos: TAction
+      Category = 'Movimenta'#231#245'es'
+      Text = 'Ordem de Servi'#231'o'
+      OnExecute = actOrdensServicosExecute
+    end
+  end
+end

@@ -1,0 +1,43 @@
+inherited frmOrdemServicoListagem: TfrmOrdemServicoListagem
+  Caption = 'frmListagemPadrao1'
+  DesignerMasterStyle = 0
+  inherited lytBase: TLayout
+    inherited pnlPesquisa: TPanel
+      object edtNumero: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 0
+        Position.X = 64.000000000000000000
+        Position.Y = 8.000000000000000000
+      end
+      object btnPesquisar: TButton
+        Position.X = 168.000000000000000000
+        Position.Y = 8.000000000000000000
+        TabOrder = 1
+        Text = 'btnPesquisar'
+        OnClick = btnPesquisarClick
+      end
+    end
+    inherited grdDados: TGrid
+      Viewport.Width = 640.000000000000000000
+      Viewport.Height = 399.000000000000000000
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = dtmOrdemServico.qryOrdemServico
+    ScopeMappings = <>
+    Left = 304
+    Top = 224
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      GridControl = grdDados
+      Columns = <>
+    end
+  end
+end
