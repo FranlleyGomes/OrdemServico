@@ -19,6 +19,8 @@ type
     edtNumero: TEdit;
     btnPesquisar: TButton;
     procedure btnPesquisarClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
     { Private declarations }
   public
@@ -50,6 +52,18 @@ var
    dtmOrdemServico.qryOrdemServico.Open();
 
 
+end;
+
+procedure TfrmOrdemServicoListagem.FormCreate(Sender: TObject);
+begin
+  inherited;
+   dtmOrdemServico := TdtmOrdemServico.Create(Self);
+end;
+
+procedure TfrmOrdemServicoListagem.FormDestroy(Sender: TObject);
+begin
+  inherited;
+  dtmOrdemServico.DisposeOf;
 end;
 
 end.

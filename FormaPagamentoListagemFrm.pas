@@ -15,6 +15,8 @@ type
     BindSourceDB1: TBindSourceDB;
     LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource;
     BindingsList1: TBindingsList;
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
     { Private declarations }
   public
@@ -29,5 +31,18 @@ implementation
 {$R *.fmx}
 
 uses FormaPagamentoDtm;
+
+procedure TFrmFormaPagamentoListagem.FormCreate(Sender: TObject);
+begin
+  inherited;
+    dtmFormaPagamento := TdtmFormaPagamento.Create(Self);
+    dtmFormaPagamento.qryFormaPagamento.Open();
+end;
+
+procedure TFrmFormaPagamentoListagem.FormDestroy(Sender: TObject);
+begin
+  inherited;
+dtmFormaPagamento.DisposeOf;
+end;
 
 end.

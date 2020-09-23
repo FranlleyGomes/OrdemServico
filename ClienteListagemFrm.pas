@@ -15,6 +15,8 @@ type
     BindSourceDB1: TBindSourceDB;
     LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource;
     BindingsList1: TBindingsList;
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
     { Private declarations }
   public
@@ -29,5 +31,18 @@ implementation
 {$R *.fmx}
 
 uses ClienteDtm;
+
+procedure TfrmClienteListagem.FormCreate(Sender: TObject);
+begin
+  inherited;
+   dtmCliente := TdtmCliente.Create(Self);
+   dtmCliente.qryCliente.Open();
+end;
+
+procedure TfrmClienteListagem.FormDestroy(Sender: TObject);
+begin
+  inherited;
+dtmCliente.DisposeOf;
+end;
 
 end.

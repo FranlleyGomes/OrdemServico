@@ -1,4 +1,4 @@
-object dmCliente: TdmCliente
+object dtmCliente: TdtmCliente
   OldCreateOrder = False
   Height = 150
   Width = 215
@@ -12,6 +12,7 @@ object dmCliente: TdmCliente
       FieldName = 'idcliente'
       Origin = 'idcliente'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object qryClientenome: TStringField
       FieldName = 'nome'

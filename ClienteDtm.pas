@@ -9,7 +9,7 @@ uses
   FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
-  TdmCliente = class(TDataModule)
+  TdtmCliente = class(TDataModule)
     qryCliente: TFDQuery;
     qryClienteidcliente: TFDAutoIncField;
     qryClientenome: TStringField;
@@ -23,7 +23,7 @@ type
   end;
 
 var
-  dmCliente: TdmCliente;
+  dtmCliente: TdtmCliente;
 
 implementation
 

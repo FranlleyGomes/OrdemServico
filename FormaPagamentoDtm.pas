@@ -9,7 +9,7 @@ uses
   FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
-  TdmFormaPagamento = class(TDataModule)
+  TdtmFormaPagamento = class(TDataModule)
     qryFormaPagamento: TFDQuery;
     qryFormaPagamentoidforma_pagamento: TFDAutoIncField;
     qryFormaPagamentonome: TStringField;
@@ -20,7 +20,7 @@ type
   end;
 
 var
-  dmFormaPagamento: TdmFormaPagamento;
+  dtmFormaPagamento: TdtmFormaPagamento;
 
 implementation
 

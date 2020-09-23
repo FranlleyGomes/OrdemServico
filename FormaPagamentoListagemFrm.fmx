@@ -1,14 +1,16 @@
 inherited FrmFormaPagamentoListagem: TFrmFormaPagamentoListagem
   Caption = 'FrmFormaPagamentoListagem'
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
   DesignerMasterStyle = 0
   inherited lytBase: TLayout
     inherited grdDados: TGrid
-      Viewport.Width = 640.000000000000000000
-      Viewport.Height = 399.000000000000000000
+      Viewport.Width = 636.000000000000000000
+      Viewport.Height = 374.000000000000000000
     end
   end
   object BindSourceDB1: TBindSourceDB
-    DataSet = dmFormaPagamento.qryFormaPagamento
+    DataSet = dtmFormaPagamento.qryFormaPagamento
     ScopeMappings = <>
     Left = 304
     Top = 224

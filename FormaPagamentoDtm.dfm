@@ -1,4 +1,4 @@
-object dmFormaPagamento: TdmFormaPagamento
+object dtmFormaPagamento: TdtmFormaPagamento
   OldCreateOrder = False
   Height = 150
   Width = 215
